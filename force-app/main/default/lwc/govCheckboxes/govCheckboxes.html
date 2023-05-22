@@ -1,0 +1,43 @@
+<template>
+    <template if:true={isVisible}>
+        <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+        <div class="ds_custom_body">
+            <div class="ds_width-container " >
+                <fieldset class="ds_fieldset" aria-describedby="waste-hint">
+                <legend class="ds_fieldset__legend ds_fieldset__legend--l">
+                    <label class=headingLabelClass>
+                    {headinglabel}
+                    </label>
+                </legend>
+                <div id="waste-hint" class="ds_hint">
+                    {headinghint}
+                </div>
+                <div class=ds_field-group>
+                    <template if:true={hasErrors}>
+                        <span class="ds_error-message">
+                            <span class="ds_visually-hidden">Error:</span>&nbsp;{errorMessage}
+                        </span>
+                    </template>
+                    <template if:true={showInfo}>
+                        <template for:each={checkboxArray} for:item="opt">
+                            <div class="ds_checkbox" key={opt.checkboxLabel} style="margin-bottom: 30px;">
+                                <input class="ds_checkbox__input" 
+                                    id={opt.checkboxLabel} 
+                                    data-id={opt.checkboxLabel} 
+                                    name={opt.checkboxLabel} 
+                                    type="checkbox" 
+                                    checked={opt.checkboxValue} 
+                                    onclick={handleClick}>
+                                <label class="ds_checkbox__label" 
+                                        for={opt.checkboxLabel}>
+                                    {opt.checkboxLabel}
+                                </label>
+                            </div>
+                        </template>
+                    </template>
+                </div>
+                </fieldset>
+            </div>
+        </div>
+    </template>
+</template>

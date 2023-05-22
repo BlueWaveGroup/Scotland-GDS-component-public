@@ -1,0 +1,36 @@
+.ds_label{
+    font-size:16px;
+    line-height:28px;
+    min-height:56px;
+    min-width:56px;
+    padding:16px;
+    background:#0065bd;
+    border:0;
+    border-radius:0;
+    color:#fff;
+    cursor:pointer;
+    display:inline-block;
+    font-weight:700;
+    line-height:24px;
+    outline:2px solid transparent;
+    outline-offset:-2px;
+    position:relative;
+    text-align:center;
+    text-decoration:none;
+    transition:background-color .2s;
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+}
+.ds_label:hover{
+    background-color:#00437e;
+    color:#fff;
+    outline-color:transparent;
+    transition-duration:.2s
+}
+.ds_label:focus{
+    background-color:#fdd522;
+    box-shadow:0 3px #333;
+    color:#333;
+    outline:0;
+    transition-duration:0s
+}

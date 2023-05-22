@@ -1,0 +1,20 @@
+.custBody{
+    background:#fff;
+    color:#333;
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:1rem;
+    font-style:normal;
+    font-weight:normal;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    margin:0;
+    text-rendering:optimizeLegibility
+
+}
+.ds_label1{
+    color:#333;
+    display:inline-block;
+    font-weight:700;
+    margin-bottom:8px;
+    font-size:19px;
+}

@@ -1,0 +1,24 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div class="ds_notification  ds_reversed notification-banner-full-width" data-module="ds-notification">
+            <div class="ds_wrapper">
+                <template if:true={showBanner}>
+                    <div class="ds_notification__content  ds_notification__content--has-close">
+                        <h2 class="visually-hidden">Information</h2>
+                        <lightning-button-icon class="slds-button slds-button--icon-inverse slds-modal__close notification-close-icon" 
+                                            variant="bare-inverse" 
+                                            onclick={hideBanner} 
+                                            size="large" 
+                                            icon-name="utility:close">
+                                            <span class="visually-hidden">Close this notification</span>
+                        </lightning-button-icon>
+                        <div class="ds_notification__text">
+                            <p>{bodyText}</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

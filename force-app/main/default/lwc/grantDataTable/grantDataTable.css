@@ -1,0 +1,7 @@
+.dsfont{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-weight:700;
+    font-size:17px;    
+}

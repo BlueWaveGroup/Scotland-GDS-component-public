@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">    
+    <apiVersion>55.0</apiVersion>
+    <description>A component that presents the user with radio button choices</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Gov Radios Horizontal with Input</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="uniqueFieldId" type="String" label="Unique Field Id" required="true" default="radioField" description="Field Id - must be unique to this process"/>
+            <property name="questionLabel" type="String" label="Question Label" description="The label to display"/>            
+            <property name="questionHint" type="String" label="Question Hint Text" description="The hint text to show below the label"/>
+            <property name="requiredQuestion" type="Boolean" label="Required Question?" description="Is a question required to submit the form?"/>            
+            <property name="radioPicklistField" type="String" label="Radio Picklist Field"  description="The API name of a picklist to get the labels and values from in the form of SObjectName.FieldName. If standard objects have been renamed, you must use the original API name, for example, if Account has been renamed as Organisation, use Account.Name."/>
+            <property name="radioLabels" type="String" label="Radio Labels" description="A comma separated list of labels for the radios. Not required if using Radio Picklist Field."/>
+            <property name="radioValues" type="String" label="Radio Values" description="A comma separated list of values for the radios. Not required if using Radio Picklist Field."/>
+            <property name="selectedValue" type="String" label="Selected Value from Radiobox" description="Input: The default value to display, Output: The value selected"/>
+            <property name="errorMessage" type="String" label="Error Message" description="Error Message"/>
+            
+
+            <property name="fieldId" type="String" label="Field Id" required="true" default="textAreaField" description="Field Id - must be unique to this process"/>
+            <property name="label" type="String" label="Label" description="The label to display"/>
+            <property name="value" type="String" label="Value from Inputfield" description="The Value"/>
+            <property name="errorMessageInput" type="String" label="Error Message Input" description="Error Message"/>
+            <property name="required" type="Boolean" label="Required input" description="Is a value required to submit the form?"/>
+            <property name="maxCharacterCount" type="Integer" label="Maximum Character Count" description="The maximum length of the string in the field"/>
+            <property name="showCharacterCount" type="Boolean" label="Show Character Count" description="Shows the user the character count and the maximum character count"/>
+            <property name="rowCount" type="Integer" label="No of rows to display" default="5" description="Default no of rows to display in the text area"/>
+            <property name="regexPattern" type="String" label="Regular Expression" description="The regular expression the field should conform to"/>    
+            <property name="prefix" type="String" label="Value Prefix for text input only" description="The prefix before the value"/>
+            <property name="suffix" type="String" label="Value Suffix for text input only" description="The suffix after the value"/>        
+            <property name="visibilityValue" type="String" label="Visibility Value" description="the value that would allow the component to be visible.(ex yes on radiobox)"/>
+            <property name="hint" type="String" label="Hint for Input Field" description="Input field hint"/>
+            <property name="textinputType" type="String" label="Text Input Type" description="Enter 1 for text Input, 2 for text Area"/>
+
+        </targetConfig>
+    </targetConfigs>    
+</LightningComponentBundle>

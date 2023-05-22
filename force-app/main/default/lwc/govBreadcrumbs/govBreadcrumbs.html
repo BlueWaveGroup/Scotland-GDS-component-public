@@ -1,0 +1,15 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <nav aria-label="Breadcrumb">
+            <ol class="ds_breadcrumbs">
+                <template for:each={pathItems} for:item="path">
+                    <li key={path.pageName} class="ds_breadcrumbs__item">
+                        <a href="#" class="ds_breadcrumbs__link" data-id={path.pageName}
+                            onclick={handleClick}>{path.pageLabel}</a>
+                    </li>
+                </template>
+            </ol> 
+        </nav>
+    </div>
+</template>

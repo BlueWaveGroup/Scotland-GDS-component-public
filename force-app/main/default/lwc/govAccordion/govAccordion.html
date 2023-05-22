@@ -1,0 +1,23 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>    
+    <div class="ds_custom_body">
+        <div class="ds_accordion" data-module="ds-accordion">
+            <button data-accordion="accordion-open-all" type="button" class="ds_link  ds_accordion__open-all  js-open-all">Open all <span class="visually-hidden">sections</span></button>
+            <template for:each={sectionArray} for:item="opt">
+                <div class="ds_accordion-item" data-id={opt.secContentId} key={opt.secId}>
+                    <input type="checkbox" class="visually-hidden  ds_accordion-item__control" id={opt.secId} aria-labelledby="panel-1-heading" />
+                    <div class="ds_accordion-item__header">
+                        <h3 id={opt.secId} class="ds_accordion-item__title">
+                            {opt.secLabel}
+                        </h3>
+                        <span class="ds_accordion-item__indicator"></span>
+                        <label class="ds_accordion-item__label" for={opt.secId}><span class="visually-hidden">Show this section</span></label>
+                    </div>
+                    <div class="ds_accordion-item__body">
+                        {opt.secSummary}
+                    </div>
+                </div>
+        </template>
+        </div>     
+    </div>
+</template>

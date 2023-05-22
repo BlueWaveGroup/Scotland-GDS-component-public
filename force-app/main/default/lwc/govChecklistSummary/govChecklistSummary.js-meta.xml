@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Flow only component that shows a summary screen and allows the user to go back to a previous screen to make changes.</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Gov Checklist Summary List</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="sectionName" label="Section Name" type="String" description="A unique name in the current form."></property>
+            <property name="destination" label="Destination" type="String" description="Output destination"></property>
+            <property name="isCompleteSection" label="Complete Section - output" type="String" description="output to see if the section has been completed"></property>
+            <property name="confirmationLabels" label="Confirmation Labels" type="String[]" description="Collection Variable for Labels"></property>
+            <property name="confirmationDestinations" label="Confirmation Destinations" type="String[]" description="Collection Variable for Destinations"></property>
+            <property name="confirmationStatuses" label="Confirmation Statuses" type="String[]" description="Collection Variable for each section status"></property>
+            <property name="sectionLabels" label="Section Labels" type="String[]" description="Collection Variable for Section Labels"></property>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,74 @@
+.ds_label-wrapper{
+    font-size:1.1875rem;
+    line-height:1.3333333333;
+    font-weight:700;  
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+     
+}
+.ds_hint-text{
+    color:#303030;;
+    margin-bottom:16px
+}
+.ds_hint-text>*{
+    margin-bottom:8px
+}
+.inputPrefix{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-weight:400;
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.5;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display:inline-block;
+    min-width:40px;
+    min-width:2.5rem;
+    height:40px;
+    height:3rem;
+    padding:5px;
+    border:2px solid #0b0c0c;
+    background-color:#f3f2f1;
+    text-align:center;
+    white-space:nowrap;
+    cursor:default;
+    -webkit-box-flex:0;
+    -ms-flex:0 0 auto;
+    flex:0 0 auto
+}
+.inputSuffix{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-weight:400;
+    font-size:16px;
+    font-size:1rem;
+    line-height:1.5;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    display:inline-block;
+    min-width:40px;
+    min-width:2.5rem;
+    height:40px;
+    height:3rem;
+    padding:5px;
+    border:2px solid #0b0c0c;
+    background-color:#f3f2f1;
+    text-align:center;
+    white-space:nowrap;
+    cursor:default;
+    -webkit-box-flex:0;
+    -ms-flex:0 0 auto;
+    flex:0 0 auto
+}
+.textWrapper{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex
+}
+.labelClass{    
+    font-size:19px;    
+    font-weight:700;  
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;      
+}

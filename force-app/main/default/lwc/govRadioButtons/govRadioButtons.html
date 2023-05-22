@@ -1,0 +1,30 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_width-container">
+        <div class={groupClass} if:true={isInitialised}>
+                <div id="changed-name-hint" class="ds-hint" if:true={questionHint}>
+                    {questionHint}
+                </div>
+                <span class="ds_error-message" if:true={hasErrors}>
+                    <span class="ds-visually-hidden">Error:</span>&nbsp;{errorMessage}
+                </span>
+                <div class={radioClass}>
+                    <template for:each={radioOptions} for:item="option">
+                        <div class="ds_radio" key={option.key}>
+                            <input class="ds_radio__input"
+                                   id={option.key}
+                                   name={uniqueFieldId}
+                                   type="radio"
+                                   value={option.value}
+                                   checked={option.checked}
+                                   onchange={handleValueChanged}>
+                            <label class="ds_radio__label"
+                                   for={option.key}>
+                                {option.label}
+                            </label>
+                        </div>
+                    </template>
+                </div>
+        </div>
+    </div>
+</template>

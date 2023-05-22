@@ -1,0 +1,10 @@
+.headingLabelClass{
+    font-weight: bold;
+}
+
+.ds_hint_cs{
+    color:#303030;;
+    font-size:19px;
+    font-family: "Roboto-Regular", "Roboto", sans-serif;
+    margin-bottom:8px
+}

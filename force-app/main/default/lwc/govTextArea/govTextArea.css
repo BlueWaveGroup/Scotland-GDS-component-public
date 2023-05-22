@@ -1,0 +1,21 @@
+.ds_label-wrapper{
+    font-size:1.1875rem;
+    line-height:1.3333333333;
+    font-weight:700;  
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+     
+}
+.ds_hint-text{
+    color:#303030;;
+    margin-bottom:16px
+}
+.ds_hint-text>*{
+    margin-bottom:8px
+}
+.labelClass{    
+    font-size:19px;    
+    font-weight:700;  
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+         
+   
+}

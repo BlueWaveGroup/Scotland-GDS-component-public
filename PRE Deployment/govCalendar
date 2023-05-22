@@ -1,0 +1,2 @@
+the static resource called iconsStackSVG has to be created manually- failing on deployment
+ERROR running force:source:convert:  Component conversion failed: A StaticResource directory must have a content type of application/zip or application/jar - found image/svg+xml for iconsStackSVG.

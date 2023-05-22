@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Gov File Upload MS</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage,lightning__HomePage, lightning__FlowScreen">
+            <property name="label" label="Label for file uploader" type="String" default="Attach Files" />
+            <property name="recordId" label="Record Id to upload all files" type="String" default="{!recordId}" required="true" />
+            <property name="formats" label="Accepted formats for file uploader" type="String" default=".pdf,.png" required="true" /> 
+            <property name="sectionType" label="Specify the section type" description="please select an optionfrom the content type picklist" type="String" default="Invoices" required="true" /> 
+            <property name="screen" label="Specify the screen " description="please specify the screen - has to be unique among all screen" type="String"  />                       
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

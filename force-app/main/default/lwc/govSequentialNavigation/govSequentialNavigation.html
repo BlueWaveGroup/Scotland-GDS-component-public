@@ -1,0 +1,42 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div class={containerWidthClass}>
+            <div class="ds_sequential-nav">
+
+                <div class="ds_sequential-nav__item  ds_sequential-nav__item--prev">
+                    <template if:true={displayLeftButton}>
+                        <template for:each={leftButtons} for:item="button">
+                            <a key={button.id}
+                                href="#"
+                                class="ds_sequential-nav__button  ds_sequential-nav__button--left"
+                                data-action={button.action}
+                                onclick={handleClick}>
+                                <span class="ds_sequential-nav__text" data-label={button.label}>
+                                    {button.text}
+                                </span>
+                            </a>
+                        </template>
+                    </template>
+                </div>
+            
+                <div class="ds_sequential-nav__item  ds_sequential-nav__item--next">
+                    <template if:true={displayRightButton}>
+                        <template for:each={rightButtons} for:item="button">
+                            <a key={button.id}
+                                href="#"
+                                class="ds_sequential-nav__button  ds_sequential-nav__button--right"
+                                data-action={button.action}
+                                onclick={handleClick}>
+                                <span class="ds_sequential-nav__text" data-label={button.label} >
+                                    {button.text}
+                                </span>
+                            </a>
+                        </template>
+                    </template>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

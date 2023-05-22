@@ -1,0 +1,16 @@
+.notification-close-icon {
+    float: right;
+    top: 50%;
+    position: absolute;
+    margin: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    --sds-c-button-color-border: red;
+    --sds-c-button-radius-border: 0;
+    --sds-c-button-sizing-border: 0px;
+    box-shadow: none;
+}
+.notification-banner-full-width {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}

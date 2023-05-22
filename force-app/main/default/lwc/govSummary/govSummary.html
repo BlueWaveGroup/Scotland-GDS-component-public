@@ -1,0 +1,33 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <main class="gov-main-wrapper" id="main-content" role="main">
+            <div class="gov-grid-row" >
+                <div class="ds_layout__grid">
+                    <div class="gov-heading-l" title={title}>{title}</div>
+                    <div class="section-name" title={sectionName}>{sectionName}</div>
+                    <!-- start of a section -->
+                    <div class="ds_table_font">
+                        <template for:each={sectionFields} for:item="sectionField">
+                            <div key={sectionField.key} class="slds-grid slds-m-left_small slds-m-right_small slds-border_top dsfont" >                                                      
+                                <div class="slds-col slds-size_1-of-3 slds-m-left_xx-small slds-m-top_small leftColumn" title={sectionField.label}>                            
+                                    {sectionField.label}
+                                </div>
+                                <div class="slds-col slds-size_1-of-3 slds-m-left_medium slds-m-top_small" title={sectionField.value} >                            
+                                    {sectionField.value}
+                                </div>
+                                <div class="slds-col slds-size_1-of-3 slds-m-left_xx-small slds-m-right_x-large slds-m-top_small rightColumn" title="action Edit">  
+                                    <button class="buttonLink ds_link underlined slds-m-right_x-large" data-destination={sectionField.destination} onclick={handleChange} title={sectionField.changeLabel} tabindex="0">Change</button>                              
+                                    <!--<a class="ds_link underlined" data-destination={sectionField.destination} onclick={handleChange} title="change">
+                                        Change
+                                    </a>-->
+                                </div> 
+                            </div>                               
+                        </template>
+                    </div>
+                    <div class="html-element" lwc:dom="manual"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</template>

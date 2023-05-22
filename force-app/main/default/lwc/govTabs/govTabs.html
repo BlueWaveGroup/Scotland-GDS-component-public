@@ -1,0 +1,26 @@
+<template>
+  <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+  <div class = "ds_custom_body">
+    <div class="ds_tabs  ds_tabs--links" data-module="ds-tabs-navigation">
+      <nav class="ds_tabs__navigation" aria-labelledby="ds_tabs__title">
+      <h2 class={titleClass} if:true={title}>{title}</h2>
+      <template if:true={tabNames}>
+        <ul class="ds_tabs__list">
+          <template for:each={data} for:item="dt">
+            <li key={dt.heading} data-id={dt.heading} class={dt.headerClass}>
+              <div data-id={dt.heading} class={dt.tabClass} style="cursor: pointer;" onclick={handleTabSelection}>
+                {dt.heading}
+              </div>
+            </li>
+          </template>
+        </ul>
+        <template for:each={data} for:item="dt">
+          <div key={dt.heading} data-id={dt.heading} class={dt.bodyClass}>
+            <lightning-formatted-rich-text if:true={dt.bodyText} value={dt.bodyText}></lightning-formatted-rich-text>
+          </div>
+        </template>
+      </template>
+    </nav>
+    </div> 
+  </div>
+</template>

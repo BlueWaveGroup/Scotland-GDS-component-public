@@ -1,0 +1,49 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <main class="gov-main-wrapper" id="main-content" role="main">
+            <div class="gov-grid-row">
+                <div class="ds_layout__grid">
+                    <!--div class="gov-heading-l">{title}</div-->
+                    <template for:each={sections} for:item="section">
+                        <div key={section.key} class="section-name slds-m-top_x-large slds-border_bottom" title={section.label}>{section.label}</div>
+                        <!-- start of a section -->
+                        <div key={section.key} class="ds_table_font">
+                            <template for:each={section.sectionFields} for:item="sectionField">
+                                <div key={sectionField.key} class="slds-grid ">
+                                        <div  class="slds-col slds-size_1-of-2 slds-m-left_xx-small slds-m-top_small slds-m-bottom_small ">
+                                            <template if:true={sectionField.hasLink}>  
+                                                <!--<button class="buttonLink ds_link underlined" data-destination={sectionField.destination} data-completed={sectionField.isCompleteSection} onclick={handleChange} title={sectionField.label}>{sectionField.label}</button>-->                                              
+                                               <a href="#" class="ds_link underlined " data-destination={sectionField.destination} data-completed={sectionField.isCompleteSection} onclick={handleChange} title={sectionField.label} >
+                                                    {sectionField.label}
+                                                </a>
+                                            </template>
+                                            <template if:false={sectionField.hasLink}>                                                
+                                                <span class="greylink " title={sectionField.label} >
+                                                    {sectionField.label}
+                                                </span>
+                                            </template>
+                                        </div>
+                                        <template if:true={sectionField.destination}>
+                                            <div class="slds-col slds-size_1-of-2 statusCss slds-m-top_medium slds-m-bottom_small " >
+                                                <span class={sectionField.class} title={sectionField.status}>
+                                                    {sectionField.status}
+                                                </span>
+                                            </div>
+                                        </template>
+                                        <template if:false={sectionField.destination}>
+                                            <div class="slds-col slds-size_1-of-3 slds-m-top_medium slds-m-bottom_small">
+                                                <span class="govuk-visually-hidden"> {sectionField.label}</span>
+                                            </div>
+                                        </template>
+                                    
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                    <div class="html-element" lwc:dom="manual"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</template>

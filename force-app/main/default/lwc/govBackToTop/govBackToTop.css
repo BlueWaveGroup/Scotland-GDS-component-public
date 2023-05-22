@@ -1,0 +1,63 @@
+.ds_back-to-top{
+    display:none
+}
+@media only screen{
+    .ds_back-to-top{
+        bottom:56px;
+        display:block;
+        pointer-events:none;
+        position:absolute;
+        right:8px;
+        top:100vh;
+        z-index:1
+    }
+    .ds_back-to-top__button{
+        display:block;
+        position:relative;
+        transition:background-color .2s,outline-color .2s;
+        z-index:1;
+        outline:0 !important;
+        font-size:.875rem;
+        line-height:1.7142857143;
+        background-color:rgba(255,255,255,.9);
+        font-weight:700;
+        margin:0;
+        min-width:120px;
+        pointer-events:all;
+        padding:8px 32px 8px 16px;
+        position:fixed;
+        position:sticky;
+        right:8px;
+        top:calc(100vh - 56px)
+    }
+    .ds_back-to-top__button:focus{
+        background-color:#fdd522;
+        box-shadow:inset 0 -3px #333,inset 0 -3px #333;
+        color:#333
+    }
+}
+@media only screen and (forced-colors: active)and (prefers-contrast: more){
+    .ds_back-to-top__button:focus{
+        outline-color:highlight !important;
+        outline-style:solid !important;
+        outline-width:2px !important
+    }
+}
+@media only screen{
+    .ds_back-to-top__button:hover:not(:focus){
+        background-color:#d9effc
+    }
+}
+@media only screen and (min-width: 768px){
+    .ds_back-to-top__button{
+        font-size:1rem;
+        line-height:1.5
+    } 
+}
+@media only screen{
+    .ds_back-to-top__icon{
+        position:absolute;
+        right:8px;
+        top:8px
+    }
+}

@@ -1,0 +1,12 @@
+.ds_accordion-item__body{
+    background:#fff;
+    color:#333;
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:1rem;
+    font-style:normal;
+    font-weight:normal;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+    margin:0;
+    text-rendering:optimizeLegibility
+}

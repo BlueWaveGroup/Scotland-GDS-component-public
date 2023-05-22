@@ -1,0 +1,18 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div class="govuk-width-container ">
+            <div class="ds_phase-banner">
+                <p class="ds_phase-banner__content">
+                    <strong class="ds_tag  ds_phase-banner__tag">
+                        {phaseText}
+                    </strong>
+                    <span class="ds_phase-banner__text">
+                        <lightning-formatted-rich-text if:true={bodyText} value={bodyText}>
+                        </lightning-formatted-rich-text>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</template>

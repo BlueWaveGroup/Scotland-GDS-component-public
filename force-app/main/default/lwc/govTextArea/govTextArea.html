@@ -1,0 +1,28 @@
+<template>
+    <template if:true={isVisible}>
+        <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+        <div class="ds_custom_body">
+            <div class={groupClass}>                
+                <div class="labelClass" for="text-area" if:true={label}>                    
+                    {label}                 
+                </div>
+                <div id="more-detail-hint" class="ds_hint-text" if:true={hint}>
+                    {hint}
+                </div>
+                <span class="ds_input--error" if:true={hasErrors}>
+                    <span class="ds_input--error-hidden">Error:</span>&nbsp;{errorMessage}
+                </span>
+                <div class="ds_input--fluid-two-thirds">
+                    <textarea class={inputClass} id="text-area" name="text-area" rows={rowCount}
+                        aria-describedby="text-area" onkeyup={handleKeyUp} maxlength={maxCharacterCount} pattern={regularExpression}>
+                        {value}
+                    </textarea>
+                    <div id="character-count-text" class="ds-character-count ds_hint-text" aria-live="polite"
+                        if:true={showCharacterCount}>
+                        {characterCountText}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</template>

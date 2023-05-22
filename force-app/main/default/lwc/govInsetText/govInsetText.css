@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Roboto;
+    src: url('/resource/RobotoFontFamiliy/Roboto-Regular.ttf');
+}
+.inset_flow_override {
+    background: #ffffff;
+    color: #333333;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    margin: 0;
+    text-rendering: optimizeLegibility;
+}

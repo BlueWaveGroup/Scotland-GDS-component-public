@@ -1,0 +1,24 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <table class="ds_table ds_table_font">
+            <caption>{captionText}</caption>
+            <thead >
+            <tr class="ds_table_font">
+                <template for:each={columns} for:item="column" for:index="index">
+                    <th key={column.index} scope="col">{column.colHeader}</th>
+                </template>
+            </tr>
+            </thead>
+            <tbody >
+                <template for:each={rows} for:item="row" for:index="rowIndex">
+                    <tr key={row.index} >
+                        <template for:each={row.rowData} for:item="data" for:index="dataIndex">
+                            <td class="ds_table_font" if:true={data.hasData} scope="row" key={data.dataIndex}>{data.text}</td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>

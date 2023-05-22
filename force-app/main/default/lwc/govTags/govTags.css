@@ -1,0 +1,41 @@
+.infoText {    
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Roboto-Regular", "Roboto", sans-serif;
+    color: #333333;
+    text-align: left;
+    line-height: 32px;
+    font-size: 19px;
+  }
+  @media screen and (max-width: 600px) {
+    .infoText {  
+    font-size: 9px;
+    line-height: 28px;}
+
+  }
+  .ds_tag_custom{
+  font-size: .875rem;
+  line-height: 1.7142857143;
+  background: #0065bd;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0 10px;
+  text-transform: uppercase;
+  
+  }
+
+  @media screen and (max-width: 600px) {
+    .ds_tag_custom {  
+      font-size: .650rem;
+      line-height: 1;
+      background: #0065bd;
+      border-radius: 2px;
+      color: #fff;
+      display: inline-block;
+      font-weight: 650;
+      padding: 0 10px;
+      text-transform: uppercase;}
+
+  }

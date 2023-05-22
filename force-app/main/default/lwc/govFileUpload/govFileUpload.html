@@ -1,0 +1,31 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div class="ds_width-container js-enabled">
+            <div class={formGroupClass}>
+                <label class="ds_label" for="file-upload">
+                    
+                <img id="u21_img" class="img " src="https://d1icd6shlvmxi6.cloudfront.net/gsc/7CR7K2/66/9d/a7/669da75ef5c94006bba8c6b217a48a59/images/return_on_investment__3__1/file_upload_u21.svg?pageId=63f05657-437f-4a8d-8fa3-42798c6e5946">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                    {fileUploadLabel}
+                </label>
+                <span id="file-upload-error" class="ds_error-message slds-hyphenate" if:true={hasErrors}>
+                    <span class="ds_visually-hidden">Error:</span>&nbsp;{errorMessage}
+                </span>
+                <input class={inputClass} id="file-upload" name="file-upload" type="file" accept={acceptedFormats}
+                    multiple onchange={handleFilesChange} aria-describedby="file-upload-error" hidden />
+
+                <template if:true={fileNames}>
+                    <lightning-card title="Uploaded Files" icon-name="standard:account">
+                        <div style="width: auto;">
+                            <lightning-datatable data={fileNames} 
+                                                 columns={columns} 
+                                                 key-field="id">
+                            </lightning-datatable>
+                        </div>
+                    </lightning-card>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

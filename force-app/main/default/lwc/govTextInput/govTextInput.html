@@ -1,0 +1,30 @@
+<template>
+    <template if:true={isVisible}>
+        <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+        <div class="ds_custom_body slds-m-bottom_small">
+            <div class={groupClass}>
+                <div class="labelClass" for="input-text" if:true={label}>                    
+                    {label}                 
+                </div>
+                <div id="more-detail-hint" class="ds_hint" if:true={hint}>
+                    {hint}
+                </div>
+                <span class="ds_input--error" if:true={hasErrors}>
+                    <span class="ds_input--error-hidden">Error:</span>&nbsp;{errorMessage}
+                </span>
+                <div class="ds_input--fluid-two-thirds textWrapper">
+                    <div class="inputPrefix" if:true={prefix}>{prefix}</div>
+                    <input class={inputClass} id="input-text" name="input-text" type="text" pattern={regularExpression}
+                        autocomplete={autocompleteType} spellcheck={spellcheckRequired} required={required} value={value}
+                        maxlength={maxCharacterCount} onkeyup={handleKeyUp}/>
+                        <div class="inputSuffix" if:true={suffix}>{suffix}</div>
+                </div>
+                    <div id="character-count-text" class="ds_hint-text"
+                        if:true={showCharacterCount}>
+                        {characterCountText}
+                    </div>
+                
+            </div>
+        </div>
+    </template>
+</template>

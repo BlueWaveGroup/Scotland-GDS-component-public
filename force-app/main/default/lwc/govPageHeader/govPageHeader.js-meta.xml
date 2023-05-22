@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <description>Provides the Phase Banner GDS Component</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Gov Page Header</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__FlowScreen">
+            <property name="Pagelabel" type="String" label="Page label" description="The Page label to be displayed"/>
+            <property name="PageTitle" type="String" label="page title" description="The Page Title to be displayed"/>
+            <property name="MetaKey" type="String" label="Metadata key" description="The Metadata key to be displayed"/>
+            <property name="MetaValue" type="String" label="Metadata Value" description="The Metdata Value to be displayed"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

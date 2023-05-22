@@ -1,0 +1,19 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">        
+        <div class="ds_accordion-item" data-id={customKey}>
+            <input type="checkbox" class="visually-hidden  ds_accordion-item__control" id={customKey} aria-labelledby="panel-1-heading" />
+            <div class="ds_accordion-item__header">
+                <h3 id={customKey} class="ds_accordion-item__title">
+                    What could I Include?
+                </h3>
+                <span class="ds_accordion-item__indicator"></span>
+                <label class="ds_accordion-item__label" for={customKey}><span class="visually-hidden">Show this section</span></label>
+            </div>
+            <div class="ds_accordion-item__body">
+                <div class="html-element" lwc:dom="manual"></div>
+            </div>
+        </div>       
+    </div>
+    
+</template>

@@ -1,0 +1,179 @@
+.ds_label{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size:16px;
+    line-height:16px;
+    min-height:16px;
+    min-width:16px;
+    padding:10px;
+    background:#0065bd;
+    border:0;
+    border-radius:0;
+    color:#fff;
+    cursor:pointer;
+    display:inline-block;
+    font-weight:700;
+    line-height:14px;
+    outline:2px solid transparent;
+    outline-offset:-2px;
+    position:relative;
+    text-align:center;
+    text-decoration:none;
+    transition:background-color .2s;    
+    margin-bottom:1.5rem;
+}
+.ds_label:hover{
+    background-color:#00437e;
+    color:#fff;
+    outline-color:transparent;
+    transition-duration:.2s
+}
+.ds_label:focus{
+    background-color:#fdd522;
+    box-shadow:0 3px #333;
+    color:#333;
+    outline:0;
+    transition-duration:0s
+}
+.dsfontReg{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-weight:700;
+    font-size:16px;    
+    color:#333;
+}
+.dsFileUpload{
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;    
+    font-size:16px;
+    line-height:16px;
+    min-height:16px;
+    min-width:16px;
+    padding:5px;
+    background:#0065bd;
+    border:0;
+    border-radius:0;
+    color:#fff;    
+    display:inline-block;
+    font-weight:700;
+    line-height:14px;
+    outline:2px solid transparent;
+    outline-offset:-2px;
+    position:relative;
+    text-align:center;
+    text-decoration:none;
+    transition:background-color .2s;    
+    margin-bottom:1.5rem;
+
+}
+.dsFileUpload:hover{
+    background-color:#00437e;
+    color:#fff;
+    outline-color:transparent;
+    transition-duration:.2s
+}
+.dsFileUpload:focus{
+    background-color:#fdd522;
+    box-shadow:0 3px #333;
+    color:#333;
+    outline:0;
+    transition-duration:.1s
+}
+
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    padding: 25px;
+    /*border: 1px dashed rgb(201 201 201);*/
+    border-radius: 3px;
+    transition: 0.2s;
+    background-color: #0065bd;
+    color: #ffffff;
+  }
+  
+.fake-btn {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    padding: 8px 15px;
+    margin-right: 10px;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #0065bd;
+    font-family:Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-size:16px;
+    line-height:16px;
+    min-height:16px;
+    min-width:16px;
+  }
+  
+.file-msg {
+    font-size:16px;
+    line-height:16px;
+    min-height:16px;
+    min-width:16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    
+  }
+
+.file-input:focus{
+    outline: none;
+  }
+
+.file-drop-area:focus-within{
+    background-color:#fdd522;
+    box-shadow:0 3px #333;
+    color:#333;
+    outline:0;
+    transition-duration:.1s
+}
+
+.upload-icon {
+    margin-right: 4px;
+    --sds-c-icon-color-foreground-default: #0065bd;
+}
+
+.upload-button-text{
+    font-weight: 400;
+    padding-top: 5px;
+}
+
+.input-wrapper{
+    border: 1px dashed rgb(201 201 201);
+    padding: 12px 8px 10px 3px;
+}
+@font-face {
+    font-family: Roboto;
+    src: url('/resource/RobotoFontFamiliy/Roboto-Regular.ttf');
+}
+.inset_flow_override {
+    background: #ffffff;
+    color: #333333;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;   
+    margin-bottom: 30px;
+    text-rendering: optimizeLegibility;
+}

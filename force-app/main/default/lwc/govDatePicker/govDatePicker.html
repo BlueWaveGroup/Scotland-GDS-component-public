@@ -1,0 +1,82 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div data-module="ds-datepicker" class="ds_datepicker js-initialised">
+            <label class="ds_label" for="start-date">{fieldLabel}</label>
+            <div class="ds_input__wrapper ds_input__wrapper--has-icon">
+                <input id="start-date" data-maxdate="19/09/2022" data-mindate="09/08/2022" type="text" class="ds_input  ds_input--fixed-10" data-form="textinput-start-date" value={displayedDate} onclick={handleInputSelect} onchange={handleDateInputChange}>
+                <button class="ds_button  ds_button--icon-only  js-calendar-button" data-button="datepicker-start-date-toggle" onclick={toggleModal}>
+                    <span class="visually-hidden">Choose date</span>
+                    <svg class="ds_icon" aria-hidden="true" role="img">
+                    <use xlink:href={calendarTodaySVG}></use>
+                    </svg>
+                </button>
+            </div>
+            <template if:true={modalOpen}>
+                <div id="datepicker-150966" class="ds_datepicker__dialog datepickerDialog ds_datepicker__dialog--open" role="dialog" aria-modal="true" aria-labelledby="datepicker-title-61832" style="display: block; left: 222px;">
+                    <div class="ds_datepicker__dialog__header " >
+                        <div class="ds_datepicker__dialog__navbuttons">
+                        <button class="ds_button  ds_button--icon-only  js-datepicker-prev-year" aria-label="previous year" data-button="button-datepicker-prevyear" onclick={prevYear}>
+                            <span class="visually-hidden">Previous year</span>
+                            <svg focusable="false" class="ds_icon" aria-hidden="true" role="img">
+                            <use xlink:href={doubleChevronLeftSVG}></use>
+                            </svg>
+                        </button>
+                        <button class="ds_button  ds_button--icon-only  js-datepicker-prev-month" aria-label="previous month" data-button="button-datepicker-prevmonth" onclick={prevMonth}>
+                            <span class="visually-hidden">Previous month</span>
+                            <svg focusable="false" class="ds_icon" aria-hidden="true" role="img">
+                            <use xlink:href={chevronLeftSVG}></use>
+                            </svg>
+                        </button>
+                        </div>
+                        <h2 id="datepicker-title-61832" class="ds_datepicker__dialog__title  js-datepicker-month-year" aria-live="polite">{displayedMonthLabel} {displayedYear}</h2>
+                        <div class="ds_datepicker__dialog__navbuttons">
+                        <button class="ds_button  ds_button--icon-only  js-datepicker-next-month" aria-label="next month" data-button="button-datepicker-nextmonth" onclick={nextMonth}>
+                            <span class="visually-hidden">Next month</span>
+                            <svg focusable="false" class="ds_icon" aria-hidden="true" role="img">
+                            <use xlink:href={chevronRightSVG}></use>
+                            </svg>
+                        </button>
+                        <button class="ds_button  ds_button--icon-only  js-datepicker-next-year" aria-label="next year" data-button="button-datepicker-nextyear" onclick={nextYear}>
+                            <span class="visually-hidden">Next year</span>
+                            <svg focusable="false" class="ds_icon" aria-hidden="true" role="img">
+                            <use xlink:href={doubleChevronRightSVG}></use>
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
+            
+                    <table class="ds_datepicker__dialog__table  js-datepicker-grid" role="grid" aria-labelledby="datepicker-title-61832">
+                        <caption class="ds_datepicker__dialog__table-caption">You can use the cursor keys to select a date</caption>
+                        <thead>
+                        <tr>
+                            <th scope="col" abbr="Sunday">Su</th>
+                            <th scope="col" abbr="Monday">Mo</th>
+                            <th scope="col" abbr="Tuesday">Tu</th>
+                            <th scope="col" abbr="Wednesday">We</th>
+                            <th scope="col" abbr="Thursday">Th</th>
+                            <th scope="col" abbr="Friday">Fr</th>
+                            <th scope="col" abbr="Saturday">Sa</th>
+                        </tr>
+                        </thead>
+                        <tbody onkeydown={handleKeyDown}>
+                            <template for:each={calendarData} for:item="week">
+                                <tr key={id}>
+                                    <template for:each={week.days} for:item="day" for:index="dayNo">
+                                        <td key={day.id} data-id={dayNo}>
+                                            <button disabled={day.disabled} data-form="date-select" tabindex={day.tabindex} class={day.class}  onclick={handleDateSelect} data-value={day.value} style={day.style}>{day.value}</button>
+                                        </td>
+                                    </template>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                <div class="ds_datepicker__dialog__buttongroup">
+                    <button class="ds_button  ds_button--small  ds_button--cancel  js-datepicker-cancel" value="cancel" data-button="button-datepicker-cancel" onclick={handleCancel}>Cancel</button>
+                    <button class="ds_button  ds_button--small  js-datepicker-ok" value="ok" data-button="button-datepicker-ok" onclick={handleOK}>OK</button>
+                </div>
+            </div>
+        </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,87 @@
+.gov-main-wrapper{
+    display:block;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+.gov-grid-row:after{
+    content:"";
+    display:block;
+    clear:both
+}
+.container-full-width{
+    width: 90vw;
+    margin: 0px auto;
+}
+.table-container{
+    display: table;
+    width: 100%;
+}
+.table-row{
+    display: table-row;
+}
+.underlined{
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 19px;
+}
+.greylink{
+    color:#727272;
+    font-weight: 500;
+    font-size: 19px;
+}
+.section-name{
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 22px;
+    border-bottom: 1px solid darkgrey;
+    font-weight: bold;
+    /*padding-bottom: 20px;*/
+}
+.nsy_status{
+    padding: 2px 8px 2px 8px;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    font-family: "ArialMT", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+.cns_status{
+    padding: 2px 8px 2px 8px;
+    background-color: #ebebeb;
+    box-sizing: border-box;
+    font-family: "ArialMT", "Arial", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+.cmp_status{
+    padding: 2px 8px 2px 8px;
+    background-color: #0065bd;
+    box-sizing: border-box;
+    font-family: "ArialMT", "Arial", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: normal;
+}
+.text_capitalize{
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.statusCss{
+    text-align: right;
+}
+.buttonLink {
+    background-color: white; 
+    border: none;
+    color: #0065bd;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 19px;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

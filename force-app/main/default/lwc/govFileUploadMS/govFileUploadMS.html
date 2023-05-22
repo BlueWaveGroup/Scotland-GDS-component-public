@@ -1,0 +1,72 @@
+<template>
+    
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <lightning-card class="slds-m-top_medium"> 
+        <div class="ds_inset-text inset_flow_override">
+            <div class="ds_inset-text__text">
+                You can upload Word, PDF, JPEG or Excel files up to 20 MB. 
+            </div>
+        </div>    
+        <div class="dsfontReg">{label}</div>
+        <!--<div class="slds-m-around_medium ds_label">-->          
+            <lightning-file-upload tabindex="0" class="dsFileUpload"             
+            accept={acceptedFormats}
+            file-field-name="Guest_Record_fileupload__c"
+            file-field-value={encryptedToken}
+            onuploadfinished={handleUploadFinished}></lightning-file-upload>
+        <!--</div>-->
+        
+        <template if:true={fileData}>
+            <div class="ds_label">{fileData.filename}</div>
+            <div class="slds-container_small">
+                <section role="dialog"  aria-labelledby="modal-heading-01" aria-modal="true"
+                    aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open" >
+                    <div class="slds-modal__container">
+                        <!--<header class="slds-modal__header">
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"  title={title}>{title}</h2>
+                        </header>-->
+                        <div class="slds-modal__content slds-p-around_medium dsfontReg" id="modal-content-id-1"  >
+                            <p title={fileData.filename}>{fileData.filename}</p>
+                        </div>
+                        <div class="slds-modal__content slds-p-around_medium dsfontReg" id="modal-content-id-2"  >
+                            <!--<label title="Add a description to the file">Add a description to the file</label>-->
+                            <div class="slds-text-color_error" if:true={showError}>Please enter a description</div>
+                            <lightning-input type="text" class="dsfontReg" label="Add a description to the file" onchange={handleDescription} required="true"></lightning-input>
+                        </div>
+                        <footer class="slds-modal__footer dsfontReg">
+                            <lightning-button variant="neutral" name="cancel" label=Cancel title=Cancel
+                                onclick={handleCancel} clas="dsfontReg" tabindex="0"></lightning-button><!---->
+                            <lightning-button variant="brand" name="upload" label=Upload title=Upload
+                                onclick={handleClick} class="dsfontReg" tabindex="0"></lightning-button><!--tabindex="0"-->
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
+        
+        <template if:true={hasData}>
+            <lightning-layout-item padding="around-small" size="12">
+                <lightning-layout>
+                    <lightning-layout-item size="3">
+                        <b>Name</b>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <b>Description</b>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                        <b>Type</b>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="3">
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>               
+            <template for:each={files} for:item="fileItem">                         
+                <c-files-list key={fileItem.Id} filename={fileItem.Title} filedescription={fileItem.Description} fileid={fileItem.Id} filetype={fileItem.Type} onfiledelete={handleDeletion} onfileupdate={handleDescriptionUpdate}></c-files-list>
+            </template> 
+        </template>          
+       
+        <!--<lightning-button variant="brand" label="submit" title="Submit" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>-->
+    </lightning-card>
+   
+</template>

@@ -1,0 +1,43 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <template if:true={isVisible}>
+        <div class="ds_custom_body">
+            <div class="ds_custom_body" if:true={isInitialised} >
+                <fieldset aria-describedby="changed-name-hint">
+                    <legend if:true={questionLabel}>
+                        <div class="ds_label1" title={questionLabel} >
+                            {questionLabel}
+                        </div>
+                    </legend>
+                    <div id="changed-name-hint" class="ds_hint-text" if:true={questionHint} title={questionHint} >
+                        {questionHint}
+                    </div>
+                    <!--<span class="govuk-error-message" if:true={hasErrors}>
+                        <span class="govuk-visually-hidden" title={errorMessage}>Error:</span>&nbsp;{errorMessage}
+                    </span>-->
+                    <span class="ds_question" if:true={hasErrors}>
+                        <span class="ds_question--error">Error:</span>&nbsp;{errorMessage}
+                    </span>
+                    <div class="ds_field-group">
+                        <template for:each={radioOptions} for:item="option">
+                            <div class="ds_radio1" key={option.key}>
+                                <input class="ds_radio__input1"
+                                    id={option.key}
+                                    name={uniqueFieldId}
+                                    type="radio"
+                                    value={option.value}
+                                    checked={option.checked}
+                                    onchange={handleValueChanged}>
+                                <label class="ds_radio__label"
+                                    for={option.key}>
+                                    {option.label}
+                                </label>
+                            </div>
+                        </template>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </template>
+
+</template>

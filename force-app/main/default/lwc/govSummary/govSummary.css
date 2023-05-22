@@ -1,0 +1,64 @@
+.gov-main-wrapper{
+    display:block;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+.gov-grid-row:after{
+    content:"";
+    display:block;
+    clear:both
+}
+.gov-heading-l {
+    width: 399px;
+    height: 56px;
+    font-size: 36px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    font-family: "Roboto-Bold", "Roboto Bold", "Roboto", sans-serif;
+    font-weight: 700;
+    color: #333333;
+    text-align: left;
+    line-height: 56px;
+}
+.container-full-width{
+    width: 90vw;
+    margin: 0px auto;
+}
+.table-container{
+    display: table;
+    width: 100%;
+}
+.table-row{
+    display: table-row;
+}
+.underlined{
+    text-decoration: underline;
+}
+.section-name{
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    border-bottom: 1px solid darkgrey;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+.leftColumn{
+    font-family: Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;   
+}
+.rightColumn{
+    text-align: center;  
+}
+.buttonLink {
+    background-color: white; 
+    border: none;
+    color: #0065bd;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 19px;
+    font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

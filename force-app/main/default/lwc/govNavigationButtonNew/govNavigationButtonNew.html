@@ -1,0 +1,33 @@
+<template>
+    <c-gov-c-s-s-provider></c-gov-c-s-s-provider>
+    <div class="ds_custom_body">
+        <div class="button-group">
+            <template if:false={hideBackButton}>
+                   <!-- <button 
+                        class="ds_button  ds_button--cancel  ds_button--has-icon  ds_button--has-icon--left"
+                        data-action="BACK" onclick={handleClick} title="back">
+                        <img class="img "                            
+                            src="https://d1icd6shlvmxi6.cloudfront.net/gsc/7CR7K2/66/9d/a7/669da75ef5c94006bba8c6b217a48a59/images/return_on_investment__3__1/u12.png?pageId=63f05657-437f-4a8d-8fa3-42798c6e5946">
+                        Back
+                    </button>-->
+
+                    <button 
+                    class="ds_button  ds_button--cancel  ds_button--has-icon  ds_button--has-icon--left"
+                    data-action="BACK" onclick={handleClick} title="back">
+                    <img class="img "                            
+                        src={backButton}>
+                    Back
+                </button>
+            </template>
+            &nbsp;&nbsp;&nbsp;
+            <!--<button class="ds_button  ds_button--has-icon" title={nextLabel} onclick={handleClick} data-action="NEXT">
+                {nextLabel}
+                <img id="u15_img" class="img1 " src="https://d1icd6shlvmxi6.cloudfront.net/gsc/7CR7K2/66/9d/a7/669da75ef5c94006bba8c6b217a48a59/images/return_on_investment__3__1/u15.png?pageId=63f05657-437f-4a8d-8fa3-42798c6e5946">
+            </button>-->
+            <button class="ds_button  ds_button--has-icon" title={nextLabel} onclick={handleClick} data-action="NEXT">
+                {nextLabel}
+                <img id="u15_img" class="img1 " src={forwardButton}>
+            </button>
+        </div>
+    </div>
+</template>
